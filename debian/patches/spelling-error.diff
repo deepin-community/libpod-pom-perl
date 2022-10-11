@@ -1,0 +1,16 @@
+Description: spelling error
+Author: Xavier Guimard <yadd@debian.org>
+Forwarded: https://github.com/neilb/Pod-POM/issues/9
+Last-Update: 2019-02-26
+
+--- a/lib/Pod/POM.pm
++++ b/lib/Pod/POM.pm
+@@ -901,7 +901,7 @@
+ Pod::POM::Node::Head2 object, then the view_head2($node) method is
+ dispatched.  And so on, and so on, with each node knowing what it is
+ and where it's going as if determined by some genetically pre-programmed
+-instinct.  Fullfilling their destinies, so to speak.
++instinct.  Fulfilling their destinies, so to speak.
+ 
+ Double dispatch allows us to do away with all the explicit type
+ checking and other nonsense and have the node objects themselves worry

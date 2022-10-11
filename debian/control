@@ -1,0 +1,28 @@
+Source: libpod-pom-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: gregor herrmann <gregoa@debian.org>,
+           Dominique Dumont <dod@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper (>= 11)
+Build-Depends-Indep: perl,
+                     libtest-differences-perl,
+                     libfile-slurper-perl
+Standards-Version: 4.3.0
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libpod-pom-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libpod-pom-perl.git
+Homepage: https://metacpan.org/release/Pod-POM
+
+Package: libpod-pom-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends}
+Description: module providing a Pod Object Model
+ Pod::POM is a Perl Pod document parser that exposes an object model called
+ Pod Object Model. The object model is generated as a hierarchical tree of
+ nodes, each of which represents a different element of the original document.
+ The tree can be walked manually and the nodes examined, printed or otherwise
+ manipulated. Pod::POM also provides view objects, which can automatically
+ traverse the tree, or section thereof, and generate an output representation
+ in one form or another.

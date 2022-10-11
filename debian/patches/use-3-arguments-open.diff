@@ -1,0 +1,17 @@
+Description: use 3 arguments open()
+Author: Xavier Guimard <yadd@debian.org>
+Bug-Debian: https://bugs.debian.org/923224
+Forwarded: https://github.com/neilb/Pod-POM/issues/8
+Last-Update: 2019-02-26
+
+--- a/lib/Pod/POM.pm
++++ b/lib/Pod/POM.pm
+@@ -138,7 +138,7 @@
+ 	local *FP;
+ 	local $/ = undef;
+ 	$name = ( $file eq '-' ? '<standard input>' : $file );
+-	open(FP, $file) || return $self->error("$file: $!");
++	open(FP, '<', $file) || return $self->error("$file: $!");
+ 	$text = <FP>;
+ 	close(FP);
+     }

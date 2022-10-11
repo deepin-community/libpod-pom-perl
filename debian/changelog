@@ -1,0 +1,212 @@
+libpod-pom-perl (2.01-3) unstable; urgency=medium
+
+  * Team upload
+  * Add patch to use 3-arguments open() (Closes: #923224)
+  * Add spelling-error patch
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 26 Feb 2019 16:54:52 +0100
+
+libpod-pom-perl (2.01-2) unstable; urgency=medium
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ gregor herrmann ]
+  * Simplify BTS URL.
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+  * Remove Jonathan Yu from Uploaders. Thanks for your work!
+  * Remove Ryan Niebur from Uploaders. Thanks for your work!
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ gregor herrmann ]
+  * Add a patch to fix a warning.
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 4.3.0.
+  * Bump debhelper compatibility level to 11.
+  * Remove trailing whitespace from debian/*.
+  * Add debian/upstream/metadata.
+  * Update upstream contact in debian/copyright.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 18 Jan 2019 18:57:40 +0100
+
+libpod-pom-perl (2.01-1) unstable; urgency=medium
+
+  * Imported Upstream version 2.01
+  * control: added me to uploaders
+  * control: BD-I: replaced libfile-slurp-perl dep
+    with libfile-slurper-perl
+  * copyright: removed unused inc/* entry
+  * removed whatis-entries patch (applied upstream)
+
+ -- Dominique Dumont <dod@debian.org>  Mon, 16 Nov 2015 17:52:52 +0100
+
+libpod-pom-perl (0.29-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ gregor herrmann ]
+  * Strip trailing slash from metacpan URLs.
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-Browser URL to cgit web frontend
+
+  [ Dominique Dumont ]
+  * added patch to fix warning shown when loading this
+    module (Closes: #776547)
+  * control: added Testsuite parameter
+  * control: declare compliance with 3.9.6
+
+ -- Dominique Dumont <dod@debian.org>  Sat, 23 May 2015 16:59:10 +0200
+
+libpod-pom-perl (0.29-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Install all example scripts.
+  * Update years of copyright.
+  * Drop unversioned perl from Depends.
+  * Declare compliance with Debian Policy 3.9.5.
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 02 Jan 2014 22:03:47 +0100
+
+libpod-pom-perl (0.28-1) unstable; urgency=low
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ gregor herrmann ]
+  * debian/control: update {versioned,alternative} (build) dependencies.
+
+  [ Salvatore Bonaccorso ]
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ gregor herrmann ]
+  * New upstream release.
+    Fixes "FTBFS with perl 5.18: t/htmlview.t"
+    (Closes: #710980)
+  * Refresh whatis patch, add DEP3 headers and forward it.
+  * debian/copyright: switch formatting to Copyright-Format 1.0.
+  * Update some copyright years and refresh license stanzas.
+  * Bump debhelper compatibility level to 8.
+  * Set Standards-Version to 3.9.4 (no further changes).
+
+ -- gregor herrmann <gregoa@debian.org>  Tue, 04 Jun 2013 20:15:47 +0200
+
+libpod-pom-perl (0.27-1) unstable; urgency=low
+
+  [ Jonathan Yu ]
+  * New upstream release
+  * Standards-Version 3.8.4 (no changes)
+  * Use new short debhelper rules format
+  * Use new DEP5 copyright format
+  * Update to 3.0 (quilt) source format
+  * Rewrite control description
+  * Add myself to Uploaders
+  * Update copyright information
+  * Refresh POD whatis patch
+  * Do not install Pod::POM::Node::* manpages, as there is little
+    documentation contained in them
+
+  [ Ryan Niebur ]
+  * New upstream release
+  * add copyright information for t/YAML/Tiny.pm
+  * drop build dependency on libyaml-perl
+  * fix my patch..
+  * forwarded patch
+  * remove my patch, it's applied upstream in verion 0.26
+  * Update ryan52's email address
+
+  [ Nathan Handler ]
+  * debian/watch: Update to ignore development releases.
+
+  [ gregor herrmann ]
+  * debian/copyright: add info about new third-party test file.
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Sat, 03 Apr 2010 01:25:15 -0400
+
+libpod-pom-perl (0.24-1) unstable; urgency=low
+
+  [ Ryan Niebur ]
+  * New upstream release
+  * add myself to uploaders
+  * fix pod2man errors and add whatis entries to all man pages
+    - use quilt
+    - add README.source
+  * update upstream copyright
+
+  [ gregor herrmann ]
+  * debian/copyright: add information for files under inc/.
+
+ -- Ryan Niebur <ryanryan52@gmail.com>  Mon, 23 Mar 2009 18:30:11 -0700
+
+libpod-pom-perl (0.18-1) unstable; urgency=low
+
+  * New upstream release.
+  * Don't install README anymore (text version of the POD documentation).
+  * Set debhelper compatibility level to 7; adapt
+    debian/{control,compat,rules}.
+  * debian/copyright: switch to new format.
+  * debian/watch: use dist-based URL and remove call to uupdate.
+  * debian/control:
+    - added: Vcs-Svn field (source stanza); Vcs-Browser field (source stanza);
+      Homepage field (source stanza); ${misc:Depends} to Depends: field.
+    - removed: XS- Vcs-Svn fields
+    - add /me to Uploaders
+    - set Standards-Version to 3.8.1 (no changes)
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 12 Mar 2009 23:50:33 +0100
+
+libpod-pom-perl (0.17-6) unstable; urgency=low
+
+  * Adopting the package on behalf of the Debian Perl Group (Closes:
+    #379983)
+  * Updating Debhelper compat level to 5
+  * Reworked debian/rules to be more similar to the other pkg-perl's
+    rules files
+
+ -- Gunnar Wolf <gwolf@debian.org>  Wed, 28 Feb 2007 11:19:16 -0600
+
+libpod-pom-perl (0.17-5) unstable; urgency=low
+
+  * Orphan package
+    - Change maintainer to Debian QA Group <packages@qa.debian.org>
+
+ -- Taku YASUI <tach@debian.or.jp>  Thu, 27 Jul 2006 01:42:44 +0900
+
+libpod-pom-perl (0.17-4) unstable; urgency=low
+
+  * Add debian/watch file
+
+ -- Taku YASUI <tach@debian.or.jp>  Mon, 18 Jul 2005 09:36:36 +0900
+
+libpod-pom-perl (0.17-3) unstable; urgency=low
+
+  * Change download URL to cpan primary site.
+
+ -- Taku YASUI <tach@debian.or.jp>  Wed, 24 Nov 2004 03:51:45 +0900
+
+libpod-pom-perl (0.17-2) unstable; urgency=low
+
+  * Change section from interpreters to perl
+
+ -- Taku YASUI <tach@debian.or.jp>  Wed, 10 Sep 2003 21:58:13 +0900
+
+libpod-pom-perl (0.17-1) unstable; urgency=low
+
+  * New upstream release
+    (closes: #190056)
+
+ -- Taku YASUI <tach@debian.or.jp>  Wed, 10 Sep 2003 21:23:47 +0900
+
+libpod-pom-perl (0.02-2) unstable; urgency=low
+
+  * Change Architecture: any to all. (closes: #101382, #101449)
+
+ -- Taku YASUI <tach@debian.or.jp>  Tue, 19 Jun 2001 19:56:58 +0900
+
+libpod-pom-perl (0.02-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Taku YASUI <tach@debian.or.jp>  Wed,  6 Jun 2001 14:28:49 +0900

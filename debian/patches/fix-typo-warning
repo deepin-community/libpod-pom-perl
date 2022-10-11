@@ -1,0 +1,16 @@
+Description: Fix typo warning
+ Declare an empty @ATTRIBS array to avoid warnings 
+ that appears when this module is used. Weirdly 
+ enough, this warning does not show up in tests 
+Bug-Debian: https://bugs.debian.org/776547
+Author: dod
+--- a/lib/Pod/POM/Node/Pod.pm
++++ b/lib/Pod/POM/Node/Pod.pm
+@@ -30,6 +30,7 @@
+ 
+ use parent qw( Pod::POM::Node );
+ 
++our @ATTRIBS = ();
+ our @ACCEPT = qw( head1 head2 head3 head4 over begin for text verbatim code );
+ 
+ 1;

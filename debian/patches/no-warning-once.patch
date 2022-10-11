@@ -1,0 +1,20 @@
+Description: add "no warnings 'once'" to Pod::POM::Node
+ Fixes warnings like
+ % perl -w -M"Config::Model::TkUI" -e 1
+ Name "Pod::POM::Node::Verbatim::EXPECT" used only once: possible typo at /usr/share/perl5/Pod/POM/Node.pm line 137.
+Origin: vendor
+Author: gregor herrmann <gregoa@debian.org>
+Last-Update: 2019-01-18
+Forwarded: https://rt.cpan.org/Ticket/Display.html?id=128290
+Bug: https://rt.cpan.org/Ticket/Display.html?id=128290
+
+--- a/lib/Pod/POM/Node.pm
++++ b/lib/Pod/POM/Node.pm
+@@ -132,6 +132,7 @@
+     $name = $NAMES->{ $class }
+ 	|| return $self->error("no name for $class");
+     {
++	no warnings 'once';
+ 	no strict qw( refs );
+ 	$accept  = \%{"$class\::ACCEPT"};
+ 	$expect  =  ${"$class\::EXPECT"};
